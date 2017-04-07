@@ -11,7 +11,7 @@
 
 ## .NET Libraries 
 -----------------------
-* Albert(Basic Library that can be used by all software)
+* AlbertPower(Standard .NET Library that can be used by all software)
 * AlbertWin(Library based on WPF)
 * AlbertRun(Library based on UWP)
 
