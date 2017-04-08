@@ -12,8 +12,8 @@
 ## .NET Libraries 
 -----------------------
 * AlbertPower(Standard .NET Library that can be used by all software)
-* AlbertWin(Library based on WPF)
-* AlbertRun(Library based on UWP)
+* AlbertWPF(Library based on WPF)
+* AlbertUWP(Library based on UWP)
 
 ------------------------------
 Created by Albert M. Byrd 

@@ -83,7 +83,7 @@ namespace Albert.Power
 		{
 			var pc = percent * .01;//Convert Percent 
 			var cal = number * pc;
-			var rt = Math.Round(cal, 1); //Convert to have 1 decimal point; 
+			var rt = Round(cal, 1); //Convert to have 1 decimal point; 
 			return rt; //Return the value; 
 		}
 		public static double ConvertFeetToMile(double ft)
@@ -95,27 +95,27 @@ namespace Albert.Power
 		public static double ConvertMileToFeet(double mi)
 		{
 			var cal = mi * 5280;// Do the math 
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value
 		}
 
 		public static double ConvertYardToMile(double yard)
 		{
 			var cal = yard / 1760; // Do the math
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value;
 		}
 		public static double ConvertMileToYard(double mi)
 		{
 			var cal = mi * 1760;// Do the math 
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value
 		}
 
 		public static double ConvertInchToMetter(double inches)
 		{
 			var cal = inches / 39; // Do the math
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value;
 		}
 		public static double ConvertMetterToInch(double m)
@@ -128,27 +128,27 @@ namespace Albert.Power
 		public static double ConvertMileToKilometer(double mi)
 		{
 			var cal = mi / 0.6; // Do the math
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value;
 		}
 		public static double ConvertKilometerToMile(double km)
 		{
 			var cal = km * 0.6;// Do the math 
-			var rt = Math.Round(cal, 1);// Round to 1
+			var rt = Round(cal, 1);// Round to 1
 			return rt;// Return the value
 		}
 
 		public static double PoundToKilogram(double lbs)
 		{
 			var cal = lbs * .45;// do the math 
-			var rt = Math.Round(cal, 1); // Round to 1
+			var rt = Round(cal, 1); // Round to 1
 			return rt;
 		}
 
 		public static double KilogramToPound(double kg)
 		{
 			var cal = kg / .45;// do the math 
-			var rt = Math.Round(cal, 1); // Round to 1
+			var rt = Round(cal, 1); // Round to 1
 			return rt;
 		}
 
