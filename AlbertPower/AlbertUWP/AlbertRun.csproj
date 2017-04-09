@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4BDB8D65-CC7D-460E-94E9-56EB8ABDC39D}</ProjectGuid>
+    <ProjectGuid>{DCA52205-DDFF-4FDC-BC65-D0311F74EE28}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Albert.Power.Runtime</RootNamespace>
-    <AssemblyName>AlbertUWP</AssemblyName>
+    <AssemblyName>AlbertRun</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
@@ -123,7 +123,9 @@
     <Compile Include="MsgDialog.cs" />
     <Compile Include="OptionButton.cs" />
     <Compile Include="Page10x.cs" />
-    <Compile Include="PDFViewer.xaml.cs" />
+    <Compile Include="PDFViewer.xaml.cs">
+      <DependentUpon>PDFViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PushButton.cs" />
     <Compile Include="QuickAnimation.cs" />
@@ -138,30 +140,29 @@
     <Compile Include="ThemeControl.cs" />
     <Compile Include="UCamera.cs" />
     <Compile Include="ViewModel.cs" />
+    <Compile Include="VMCommand.cs" />
     <Compile Include="WrapPanel.cs" />
-    <EmbeddedResource Include="Properties\AlbertUWP.rd.xml" />
+    <EmbeddedResource Include="Properties\AlbertRun.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlbertPower\AlbertPower.csproj">
-      <Project>{07e0c221-8f02-43ae-8b32-32fca8a00df7}</Project>
-      <Name>AlbertPower</Name>
+    <ProjectReference Include="..\AlbertFlex\AlbertFlex.csproj">
+      <Project>{a17b8cf0-eeaf-4e46-8240-392003607f67}</Project>
+      <Name>AlbertFlex</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="PDFViewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AlbertRun.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
+    <SDKReference Include="WindowsMobile, Version=10.0.14393.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
