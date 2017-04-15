@@ -17,7 +17,8 @@ namespace Albert.Power.Runtime
 	[TemplatePart(Name = "PART_Symbol", Type = typeof(TextBlock))]
 
 	/// <summary>
-	/// A special button for the SplitView
+	/// A special button f
+	/// \0or the SplitView
 	/// </summary>
 	public class HamburgerButton : PushButton
 	{

@@ -59,6 +59,7 @@ namespace Albert.Power.Runtime
 
 		}
 		#endregion
+
 		#region Converters 
 		/// <summary>
 		/// Converts a link to your javascript file 

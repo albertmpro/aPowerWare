@@ -11,16 +11,8 @@ namespace Albert.Power.Win32
 	/// </summary>
 	public static class ConsoleApp
 	{
-		/// <summary>
-		/// Create's a line to seperate text 
-		/// </summary>
-		public static string Line { get; set; } = "-----------------------------------------------------------";
-		/// <summary>
-		/// Gets or Set the Active Program 
-		/// </summary>
-		public static Action Program { get; set; }
-
-		#region Logic 
+	
+		#region Program Method's  
 
 		/// <summary>
 		/// Method help's easy create the program to be used for a Console Application  
@@ -29,11 +21,11 @@ namespace Albert.Power.Win32
 		/// <param name="_returnMethod">Used to restart the program</param>
 		/// <param name="_start">The Start Program </param>
 		/// <param name="_logic">Logic of the Program</param>
-		public static void CreateLogic(string _title, Action _returnMethod,Action _start, Action _logic)
+		public static void RunProgram(string _title, Action _returnMethod,Action _start, Action _logic)
 		{
 			Clear();// Clear the console 
 			WriteLine(_title);
-			WriteLine(Line);
+			WriteLine("------------------------");
 			WriteLine();
 			Write("Do you want to start? (y/n): ");
 			var st = ReadLine(); // Type here
@@ -50,16 +42,8 @@ namespace Albert.Power.Win32
 		}
 
 
-		/// <summary>
-		/// Load's the code you want to run
-		/// </summary>
-		/// <param name="_program">the code that you want to run</param>
-		public static void RunProgram(Action _program)
-		{
-			Program = null; // Clear out program 
-			Program = _program;
-			Program();//RunProgram
-		}
+
+
 		/// <summary>
 		/// Gives you an option to exit the code back to the start method 
 		/// </summary>
@@ -68,16 +52,26 @@ namespace Albert.Power.Win32
 		{
 			//Exit 
 			Write("Do you want to go back to the start? (y/n): ");
-			var aws = Console.ReadLine(); // type in y for yes 
+			var aws = ReadLine(); // type in y 
 
-			if (aws == "y" || aws == "Y")
+			switch(aws)
 			{
-				RunProgram(_startup); // Go to the start code
+				case "y":
+					//Run the start up method 
+					_startup?.Invoke();
+					break;
+				case "n":
+					//Run the program method 
+					_program?.Invoke();
+					break;
+				default:
+					//Run the start up method 
+					_startup?.Invoke();
+					break;
 			}
-			else
-			{
-				RunProgram(_program); // run the program code again 
-			}
+
+
+			
 		}
 
 
