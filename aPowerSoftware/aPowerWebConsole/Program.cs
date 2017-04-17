@@ -31,12 +31,13 @@ namespace aPowerWebConsole
 			{
 				Clear(); // Clear the Console 
 
+				//Right the Title 
 				WriteLine("aPowerWebConsole");
 				WriteLine(line);
-				WriteLine("Select your task\n");
-				
-				WriteLine("File Exporter = exp\nWordPress = wp\nSite Generatror = site\nAbout = about\nExit = exit");
+				WriteLine("Select your task");
 				WriteLine(line);
+				WriteLine("File Exporter = exp\nWordPress = wp\nSite Generatror = site\nAbout = about\nExit = exit\n");
+				
 
 				Write("Type your choice: ");
 				var myinput = ReadLine();
@@ -69,6 +70,7 @@ namespace aPowerWebConsole
 			}
 
 
+			#region WordPress
 			//WOrdPress Menu
 			void wp()
 			{
@@ -220,9 +222,10 @@ namespace aPowerWebConsole
 				});
 			}
 
+			#endregion
 
 
-			//var filter = "All Formats(.)|*.*";
+			#region Html Genrator 
 
 			//page maker 
 			void pagemaker()
@@ -396,7 +399,8 @@ namespace aPowerWebConsole
 
 				}
 
-			}
+			} 
+			#endregion
 
 
 			void exportToFolder()
@@ -498,12 +502,6 @@ namespace aPowerWebConsole
 
 
 			}
-
-
-
-
-
-
 
 			start();
 
