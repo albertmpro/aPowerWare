@@ -192,6 +192,14 @@ namespace Albert.Power
 		}
 
 
+		public static string ConvertAlphaToHtml(string _str)
+		{
+			var rv = _str.Replace("#FF","#");
+			//Return the Value 
+			return rv;
+		}
+
+
 
 
 

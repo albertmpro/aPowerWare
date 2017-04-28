@@ -173,7 +173,7 @@
 		/// <returns></returns>
 		public static string ConvertCssTag(string _url)
 		{
-			return $"<link rel=\"styleseet\" type=\"text/css\" media=\"screen\" href=\"{_url}\" />";
+			return $"<link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"{_url}\" />";
 		}
 		/// <summary>
 		/// Create a Css Tag with Media
@@ -183,7 +183,7 @@
 		/// <returns></returns>
 		public static string ConvertCssTag(string _url, string _media)
 		{
-			return $"<link rel=\"styleseet\" media=\"{_media}\" type=\"text/css\" href=\"{_url}\" />";
+			return $"<link rel=\"stylesheet\" media=\"{_media}\" type=\"text/css\" href=\"{_url}\" />";
 		}
 		/// <summary>
 		/// Create Icon tag

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>49fa90e9-4765-4b2e-93ec-4390eeef8fae</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AlbertWeb</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)aanie.js" />
+    <Content Include="$(MSBuildThisFileDirectory)albert.js" />
+    <Content Include="$(MSBuildThisFileDirectory)apage.js" />
+    <Content Include="$(MSBuildThisFileDirectory)carousel.js" />
+    <Content Include="$(MSBuildThisFileDirectory)flex.scss" />
+    <Content Include="$(MSBuildThisFileDirectory)flexui.scss" />
+    <Content Include="$(MSBuildThisFileDirectory)jalbert.js" />
+    <Content Include="$(MSBuildThisFileDirectory)jquery.js" />
+    <Content Include="$(MSBuildThisFileDirectory)jquery2.js" />
+    <Content Include="$(MSBuildThisFileDirectory)phpconfig.php" />
+    <Content Include="$(MSBuildThisFileDirectory)phppage.php" />
+    <Content Include="$(MSBuildThisFileDirectory)sample.py" />
+    <Content Include="$(MSBuildThisFileDirectory)sample.rb" />
+    <Content Include="$(MSBuildThisFileDirectory)typescript.ts" />
+    <Content Include="$(MSBuildThisFileDirectory)wpcontent.php" />
+    <Content Include="$(MSBuildThisFileDirectory)wpfooter.php" />
+    <Content Include="$(MSBuildThisFileDirectory)wpfunctions.php" />
+    <Content Include="$(MSBuildThisFileDirectory)wpheader.php" />
+    <Content Include="$(MSBuildThisFileDirectory)wpindex.php" />
+    <Content Include="$(MSBuildThisFileDirectory)wppage.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)webpage.html" />
+  </ItemGroup>
+</Project>

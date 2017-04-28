@@ -69,5 +69,6 @@
     <Content Include="aPowerConsol.ico" />
     <Content Include="aPowerConsol.png" />
   </ItemGroup>
+  <Import Project="..\..\AlbertPower\AlbertWeb\AlbertWeb.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

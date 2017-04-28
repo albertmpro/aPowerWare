@@ -24,7 +24,7 @@ namespace aPowerWebConsole
 		{
 			//Line 
 			var line = "----------------------";
-
+			
 
 			//Startup of The Program 
 			void start()
@@ -36,15 +36,15 @@ namespace aPowerWebConsole
 				WriteLine(line);
 				WriteLine("Select your task");
 				WriteLine(line);
-				WriteLine("File Exporter = exp\nWordPress = wp\nSite Generatror = site\nAbout = about\nExit = exit\n");
-				
+				WriteLine("File Exporter = export\nWordPress = wp\nSite Generatror = site\nAbout = about\nExit = exit\n");
+
 
 				Write("Type your choice: ");
 				var myinput = ReadLine();
 
 				switch (myinput)
 				{
-					case "exp":
+					case "export":
 						//Run the Export PRogram 
 						exportToFolder();
 						break;
@@ -54,6 +54,9 @@ namespace aPowerWebConsole
 					case "wp":
 						//Run WP
 						wp();
+						break;
+					case "about":
+						about();
 						break;
 					case "exit":
 						WriteLine("We are done, Goodbye!");
@@ -399,9 +402,39 @@ namespace aPowerWebConsole
 
 				}
 
-			} 
+			}
 			#endregion
 
+		
+			void about()
+			{
+				var ashow = true;
+
+				while (ashow == true)
+				{
+					Clear();
+					WriteLine("About\n************\naPowerWebConsole\n\nCreated by\nAlbert M. Byrd\n");
+
+					Write("Go back start menu(y/n): ");
+					var str = ReadLine();
+
+					switch (str)
+					{
+						case "y":
+							
+							ashow = false;
+							//RUn the start 
+							start();
+							
+							break;
+						default:
+							//Run the about method again
+							ashow = true;
+							break;
+					}
+				}
+
+			}
 
 			void exportToFolder()
 			{

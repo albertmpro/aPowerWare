@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbertPower", "AlbertPower\AlbertPower.csproj", "{07E0C221-8F02-43AE-8B32-32FCA8A00DF7}"
 EndProject
@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbertUWP", "AlbertUWP\Albe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlbertWPF", "AlbertWPF\AlbertWPF.csproj", "{112A2A44-4D21-451E-9B3B-994060152F6E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AlbertWeb", "AlbertWeb\AlbertWeb.shproj", "{49FA90E9-4765-4B2E-93EC-4390EEEF8FAE}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AlbertWeb\AlbertWeb.projitems*{49fa90e9-4765-4b2e-93ec-4390eeef8fae}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM

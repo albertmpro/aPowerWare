@@ -1,0 +1,22 @@
+﻿<UserControl
+    x:Class="aPowerLab.View.LaunchHub"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aPowerLab.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	Width="350"
+    d:DesignHeight="400"
+    d:DesignWidth="350">
+
+	<StackPanel>
+		<HyperlinkButton Click="hype_Click" Content="Character Lab" Tag="ch" />
+		<HyperlinkButton  Click="hype_Click" Content="Map Lab" Tag="mp" />
+		<HyperlinkButton Click="hype_Click" Content="PDF Lab" Tag="pdf" />
+		<HyperlinkButton Click="hype_Click" Content="Sketch Lab" Tag="sk" />
+		<HyperlinkButton Click="hype_Click" Content="Theme Lab" Tag="th" />
+		<HyperlinkButton Click="hype_Click" Content="WebDev Lab" Tag="wb" />
+		<HyperlinkButton Click="hype_Click" Content="Writer Lab" Tag="wr" />
+	</StackPanel>
+</UserControl>

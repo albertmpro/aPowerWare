@@ -1,0 +1,66 @@
+﻿<c:Page10x
+    x:Class="aPowerLab.View.CharacterLab"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aPowerBox.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:c="using:Albert.Power.Runtime"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AccentBrush4}">
+		<Grid.RowDefinitions>
+			<RowDefinition  Height="auto" />
+			<RowDefinition />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<c:CmdBar x:Name="cmd" >
+			<c:CmdButton Label="Draw" Icon="Edit" />
+			<c:CmdButton Label="Line">
+				<c:CmdButton.Icon>
+					<BitmapIcon UriSource="ms-appx:///Assets/appbar/line.png"/>
+				</c:CmdButton.Icon>
+				
+			</c:CmdButton>
+
+			<c:CmdButton Label="Rectangle">
+				<c:CmdButton.Icon>
+					<BitmapIcon UriSource="ms-appx:///Assets/appbar/rectangle.png"/>
+				</c:CmdButton.Icon>
+
+			</c:CmdButton>
+			<c:CmdButton Label="Circle">
+				<c:CmdButton.Icon>
+					<BitmapIcon UriSource="ms-appx:///Assets/appbar/circle.png"/>
+				</c:CmdButton.Icon>
+
+			</c:CmdButton>
+			<c:CmdButton Label="Erase">
+				<c:CmdButton.Icon>
+					<BitmapIcon UriSource="ms-appx:///Assets/appbar/erase.png"/>
+				</c:CmdButton.Icon>
+
+			</c:CmdButton>
+
+			<c:CmdButton Label="Clear" Icon="Clear" />
+			<c:CmdButton Label="Export" Icon="Save" />
+		</c:CmdBar>
+		<Viewbox Stretch="Uniform" x:Name="viewBox" Grid.Row="1">
+			<Grid x:Name="layoutRoot">
+				
+			</Grid>
+		</Viewbox>
+
+		<ComboBox x:Name="cmbState" SelectionChanged="cmbState_SelectionChanged" Grid.Row="2" HorizontalAlignment="Center" Margin="3" Width="180">
+			<ComboBoxItem Content="All" />
+			<ComboBoxItem Content="Front" />
+			<ComboBoxItem Content="Side" />
+			<ComboBoxItem Content="Back" />
+			<ComboBoxItem Content="FrontSide" />
+			<ComboBoxItem Content="FrontBack" />
+			<ComboBoxItem Content="SideBack" />
+		</ComboBox>
+		
+	</Grid>
+</c:Page10x>
