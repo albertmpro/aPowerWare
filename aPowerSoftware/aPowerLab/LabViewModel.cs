@@ -13,6 +13,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace aPowerLab
 {
+	/// <summary>
+	/// Default ViewModel of the Application 
+	/// </summary>
 	public class LabViewModel: ViewModel 
 	{
 

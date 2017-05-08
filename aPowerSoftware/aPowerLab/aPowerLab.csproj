@@ -127,6 +127,9 @@
     <Compile Include="View\StartLab.xaml.cs">
       <DependentUpon>StartLab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WebLab.xaml.cs">
+      <DependentUpon>WebLab.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -263,6 +266,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\StartLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WebLab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

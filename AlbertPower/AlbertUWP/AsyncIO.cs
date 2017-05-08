@@ -225,20 +225,6 @@ namespace Albert.Power.Runtime
 		#region Export Image Method's 
 
 
-		public static async Task<StorageFile> AutoCameraRollFileAsync(string _file)
-		{
-			try
-			{
-				return await KnownFolders.CameraRoll.CreateFileAsync(_file);
-			}
-			catch
-			{
-				var r = new Random();
-				var iv = r.Next(4000);
-				var str = $"{_file}_{iv}.jpg";
-				return await KnownFolders.CameraRoll.CreateFileAsync(str);
-			}
-		}
 
 		public static async Task LoadImageSourceAsync(Image _img, StorageFile _file)
 		{
@@ -261,33 +247,6 @@ namespace Albert.Power.Runtime
 		/// <param name="_content"></param>
 		/// <param name="_fileName"></param>
 		/// <returns></returns>
-		public static async Task SaveWPJpegAsync(UIElement _content, string _fileName)
-		{
-			var bmp = new RenderTargetBitmap();
-			//render the control to a bitmap 
-			await bmp.RenderAsync(_content);
-			var pixelBuffer = await bmp.GetPixelsAsync();
-			var file = await AutoCameraRollFileAsync(_fileName);
-			using (var stream = await file.OpenAsync(FileAccessMode.ReadWrite))
-			{
-
-				var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, stream);
-				//encode the bitmap
-				Stream pixelStream = pixelBuffer.AsStream();
-				byte[] pixels = new byte[pixelStream.Length];
-				await pixelStream.ReadAsync(pixels, 0, pixels.Length);
-				encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Straight, (uint)bmp.PixelWidth, (uint)bmp.PixelHeight, 72, 72, pixels);
-				//Set the file name 
-
-				//Clean up the mess
-				await encoder.FlushAsync();
-
-
-			}
-			//Show message that file has been saved
-			var msg = new MessageDialog($"{file.DisplayName} has been saved");
-			await msg.ShowAsync();
-		}
 
 
 		public static async Task ExportJpegThumbNailsAsync(string _defaultName, double _dpi, List<Image> _images)

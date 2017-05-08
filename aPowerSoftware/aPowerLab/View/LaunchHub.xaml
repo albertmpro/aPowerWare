@@ -11,12 +11,12 @@
     d:DesignWidth="350">
 
 	<StackPanel>
-		<HyperlinkButton Click="hype_Click" Content="Character Lab" Tag="ch" />
+
 		<HyperlinkButton  Click="hype_Click" Content="Map Lab" Tag="mp" />
-		<HyperlinkButton Click="hype_Click" Content="PDF Lab" Tag="pdf" />
+	
 		<HyperlinkButton Click="hype_Click" Content="Sketch Lab" Tag="sk" />
-		<HyperlinkButton Click="hype_Click" Content="Theme Lab" Tag="th" />
+	
 		<HyperlinkButton Click="hype_Click" Content="WebDev Lab" Tag="wb" />
-		<HyperlinkButton Click="hype_Click" Content="Writer Lab" Tag="wr" />
+	
 	</StackPanel>
 </UserControl>

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Albert.Power.Runtime;
 using static aPowerLab.LabViewModel;
+using static Albert.Power.Runtime.QuickAnimation;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace aPowerLab.View
@@ -32,6 +33,15 @@ namespace aPowerLab.View
 			VMFrame = frame;
 			//Go to the StartView
 			VMNavigate(typeof(StartLab));
+			
+			//Notify Lamba 
+			VMNotify += (s) =>
+			{
+				tbStatus.Text = s; // Link the string to the tbStatus
+				
+				//Animation 
+				RunDouble(tbStatus, "Opacity", 1, .4, TimeSpan.FromSeconds(5.4));
+			};
 
 		}
 		void ham_Click(object sender, RoutedEventArgs e)
@@ -47,11 +57,13 @@ namespace aPowerLab.View
 				case "Mp": // Go to the map lab
 					VMNavigate(typeof(MapLab));
 					break;
-				case "Ch": // Run Character Lab
-					VMNavigate(typeof(CharacterLab));
-					break;
+	
+				
 				case "Sk": // Run the SketchLab 
 					VMNavigate(typeof(SketchLab));
+					break;
+				case "Wb": // Rin the WebLab
+					VMNavigate(typeof(WebLab));
 					break;
 				default:
 

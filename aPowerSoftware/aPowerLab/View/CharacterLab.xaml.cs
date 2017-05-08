@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Albert.Power.Runtime;
+using static Albert.Power.Runtime.Device10x;
+using static Albert.Power.Runtime.AsyncIO;
 using static aPowerLab.LabViewModel;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,48 +31,12 @@ namespace aPowerLab.View
 		TextBlock tbFront, tbBack, tbSide;
 		RowDefinition row1, row2;
 
-		private void cmbState_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-			var item = cmbState.SelectedItem as ComboBoxItem;
-
-			switch(item?.Content)
-			{
-				case "All":
-					State = SheetState.All;
-					VMNotify("Show All Sides");
-					break;
-				case "Front":
-					State = SheetState.Front;
-
-					VMNotify("Show the Front");
-					break;
-				case "Side":
-					State = SheetState.Side;
-					VMNotify("Show the Side");
-					break; 
-				case "Back":
-					State = SheetState.Back;
-					VMNotify("Show the Back");
-					break;
-				case "FrontBack":
-					State = SheetState.FrontBack;
-					VMNotify("Show the Front and Back");
-					break;
-				case "FrontSide":
-					State = SheetState.FrontSide;
-					VMNotify("Show the Front and Side");
-					break;
-				case "SideBack":
-					State = SheetState.BackSide;
-					VMNotify("Show the Side and Back");
-					break;
-			}
-		}
-
 		ColumnDefinition col1, col2, col3;
 		SheetState state;
 
-
+		/// <summary>
+		/// Default Constructor 
+		/// </summary>
 		public CharacterLab()
 		{
 			this.InitializeComponent();
@@ -110,8 +76,107 @@ namespace aPowerLab.View
 
 			}
 
+
+			//Notify the Application 
+			//VMNotify("You are using hte Character Lab.");
+
 			State = SheetState.All;
 
+		}
+
+
+
+		private void cmbState_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var item = cmbState.SelectedItem as ComboBoxItem;
+
+			switch (item?.Content)
+			{
+				case "All":
+					State = SheetState.All;
+					VMNotify("Show All Sides");
+					break;
+				case "Front":
+					State = SheetState.Front;
+
+					VMNotify("Show the Front");
+					break;
+				case "Side":
+					State = SheetState.Side;
+					VMNotify("Show the Side");
+					break;
+				case "Back":
+					State = SheetState.Back;
+					VMNotify("Show the Back");
+					break;
+				case "FrontBack":
+					State = SheetState.FrontBack;
+					VMNotify("Show the Front and Back");
+					break;
+				case "FrontSide":
+					State = SheetState.FrontSide;
+					VMNotify("Show the Front and Side");
+					break;
+				case "SideBack":
+					State = SheetState.BackSide;
+					VMNotify("Show the Side and Back");
+					break;
+			}
+		}
+
+
+		async void cmd_Click(object sender, RoutedEventArgs e)
+		{
+			var cmdButton = sender as CmdButton; 
+
+			void skState(SketchState _state)
+			{
+				front.SketchState = _state;
+				back.SketchState = _state;
+				side.SketchState = _state;
+			}
+			void clear()
+			{
+				front.Children.Clear();
+				back.Children.Clear();
+				side.Children.Clear();
+			}
+			switch(cmdButton.Label)
+			{
+				case "Draw":
+					//Do the Draw State 
+					skState(SketchState.Draw);
+					break;
+				case "Line":
+					//Do the Line State 
+					skState(SketchState.Line);
+					break;
+				case "Rectangle":
+					//Do the Rectangle State 
+					skState(SketchState.Rectangle);
+					break;
+				case "Circle":
+					//Do the Circle State 
+					skState(SketchState.Circle);
+					break;
+				case "Erase":
+					//Do the Erase State 
+					skState(SketchState.Erase);
+					break;
+				case "Clear":
+					await MsgShow("Do you want ot clear these documents?", "Clear", "Clear","Cancel", () =>
+					   {
+						   //Clear Everything 
+						   clear(); 
+					   });
+					break;
+
+				case "Save":
+					
+				default:
+					//Do Nothing 
+					break;
+			}
 		}
 
 		public SheetState State

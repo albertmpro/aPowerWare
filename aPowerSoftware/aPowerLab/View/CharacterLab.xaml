@@ -10,7 +10,7 @@
 
     <Grid Background="{ThemeResource AccentBrush4}">
 		<Grid.RowDefinitions>
-			<RowDefinition  Height="auto" />
+			<RowDefinition  Height="au-to" />
 			<RowDefinition />
 			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>

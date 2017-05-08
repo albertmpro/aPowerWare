@@ -38,6 +38,10 @@
 			<TextBlock Text="{Binding }" FontWeight="Black" FontSize="24" Foreground="White" />
 		</DataTemplate>
 
+		<DataTemplate x:Key="h4">
+			<TextBlock Text="{Binding }" FontSize="18" Foreground="White" />
+		</DataTemplate>
+
 
 
 		<!--#endregion-->
@@ -119,7 +123,8 @@
 		<Style TargetType="TextBox">
 
 			<Setter Property="FontSize" Value="24" />
-			<Setter Property="Width" Value="400" />
+			<Setter Property="MinWidth" Value="400" />
+			<Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
 			<Setter Property="HeaderTemplate" Value="{StaticResource h1}" />
 		</Style>
 

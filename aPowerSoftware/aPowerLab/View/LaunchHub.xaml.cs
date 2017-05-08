@@ -39,7 +39,11 @@ namespace aPowerLab.View
 				case "mp": // Go to the Map Lab 
 					VMNavigate(typeof(MapLab));
 					break;
+				case "wb": // Go to the Web Lab 
+					VMNavigate(typeof(WebLab));
+					break;
 				default:
+
 
 					break;
 			}

@@ -1,0 +1,30 @@
+﻿<c:Page10x
+    x:Class="aPowerLab.View.WebLab"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aPowerLab.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:c="using:Albert.Power.Runtime"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AccentBrush4}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="80" />
+			<ColumnDefinition />
+			<ColumnDefinition Width="auto" />
+		</Grid.ColumnDefinitions>
+		<!-- Navigatin Bar-->
+		<TextBox Header="Address Box" GotFocus="txtUrl_GotFocus" HeaderTemplate="{StaticResource h4}" Grid.Column="1" x:Name="txtUrl"  KeyUp="txtUrl_KeyUp" InputScope="Url" />
+		<c:PushButton Click="go_Click" Grid.Column="2" Width="65" Content="GO" />
+
+		<WebView Source="http://google.com" NavigationStarting="webView_NavigationStarting" NavigationCompleted="webView_NavigationCompleted" x:Name="webView" Grid.Row="1" Grid.ColumnSpan="3" />
+
+
+
+	</Grid>
+</c:Page10x>

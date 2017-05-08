@@ -17,27 +17,17 @@
 					<c:HamburgerButton Click="mnu_Click" Label="Menu" Symbol="&#xE700;" Content="Main Menu"  ShowImage="Collapsed" ShowSymbol="Visible" />
 					<!-- Start Viewn-->
 					<c:HamburgerButton Click="ham_Click"  Symbol="St"  ShowImage="Collapsed" ShowSymbol="Visible" SymbolFontFamily="Segoe UI" Label="Start" />
-					<!-- Character Lab-->
-					<c:HamburgerButton  Click="ham_Click" Symbol="Ch" SymbolFontFamily="Segoe UI" Label="Character Lab" IconSource="ms-appx:///Assets/charactericon.png" />
-
+				
 					<!-- Map Lab-->
 					<c:HamburgerButton Click="ham_Click" Symbol="Mp" SymbolFontFamily="Segoe UI Black" Label="Map Lab"   IconSource="ms-appx:///Assets/MapIcon.png" />
 					<!-- PDF Lab-->
-					<c:HamburgerButton  Click="ham_Click" Symbol="PD" SymbolFontFamily="Segoe UI" Label="PDF Lab" ShowSymbol="Collapsed"   IconSource="ms-appx:///Assets/PdfIcon.png"  />
+			
 					<!-- Sketch Lab -->
 					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk" SymbolFontFamily="Segoe UI Black" Label="Sketch Lab" IconSource="ms-appx:///Assets/sketchicon.png" />
 
-					<!-- Theme Lab -->
-					<c:HamburgerButton  Click="ham_Click"  Symbol="Th" SymbolFontFamily="Segoe UI Black" Label="Theme Lab" ShowSymbol="Collapsed"   IconSource="ms-appx:///Assets/ThemeIcon.png"  />
+				
 					<!-- WebDev Lab-->
 					<c:HamburgerButton Click="ham_Click" Symbol="Wb" SymbolFontFamily="Segoe UI Black" Label="WebDev Lab" IconSource="ms-appx:///Assets/webicon.png" />
-
-					<!-- Writer Lab -->
-					<c:HamburgerButton Click="ham_Click"  Symbol="Wr" SymbolFontFamily="Segoe UI" Label="Write Lab"  IconSource="ms-appx:///Assets/writeicon.png"  />
-
-
-
-
 
 				</StackPanel>
 			</SplitView.Pane>

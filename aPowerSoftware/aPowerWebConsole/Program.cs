@@ -405,7 +405,21 @@ namespace aPowerWebConsole
 			}
 			#endregion
 
-		
+
+			#region  Jade Stuff 
+			void pugMenu()
+			{
+				Clear();
+				WriteLine("Pug Option ");
+				WriteLine(line);
+
+			}
+
+
+
+			#endregion
+
+
 			void about()
 			{
 				var ashow = true;
