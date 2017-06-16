@@ -24,12 +24,18 @@
 		<SolidColorBrush x:Key="AccentBrush2" Color="#FF5979E6" />
 		<SolidColorBrush x:Key="AccentBrush3" Color="#FF93ABFF" />
 		<SolidColorBrush x:Key="AccentBrush4" Color="#222222" />
+		<LinearGradientBrush x:Key="AccentChrome">
+			<GradientStop Color="{StaticResource AccentColor}" Offset="0" />
+			<GradientStop Color="{StaticResource AccentColor2}" Offset="1" />
+		</LinearGradientBrush>
+		
+		
 		<!--#endregion-->
 
 		<!--#region Data Templates-->
 
 		<DataTemplate x:Key="h1">
-			<TextBlock Text="{Binding }" FontSize="24" Foreground="White" />
+			<TextBlock Margin="7,7,0,0" Text="{Binding }" FontSize="24" Foreground="White" />
 		</DataTemplate>
 		<DataTemplate x:Key="h2">
 			<TextBlock Text="{Binding }" FontSize="24" FontWeight="Light" Foreground="White" />
@@ -52,13 +58,7 @@
 			<Setter Property="HeaderTemplate" Value="{StaticResource h2}" />
 		</Style>
 
-		<Style TargetType="Hub">
-			<Setter Property="HeaderTemplate" Value="{StaticResource h2}" />
-		</Style>
 
-		<Style TargetType="HubSection">
-			<Setter Property="HeaderTemplate" Value="{StaticResource h3}" />
-		</Style>
 		<Style TargetType="c:CmdBar">
 			<Setter Property="Background" Value="{ThemeResource AccentBrush4}"/>
 			<Setter Property="Foreground" Value="White" />
@@ -70,11 +70,13 @@
 		</Style>
 
 		<Style TargetType="c:PushButton">
-			<Setter Property="Background" Value="{StaticResource AccentBrush}" />
+			<Setter Property="Background" Value="{StaticResource AccentChrome}" />
 			<Setter Property="BackgroundPointerOver" Value="{StaticResource AccentBrush2}" />
 			<Setter Property="ForegroundPointerOver" Value="White" />
 			<Setter Property="BackgroundPressed" Value="{StaticResource AccentBrush3}" />
-			<Setter Property="Width" Value="200" />
+			<Setter Property="Width" Value="125" />
+			<Setter Property="FontSize" Value="22" />
+			<Setter Property="CornerRadius" Value="4" />
 			<Setter Property="Height" Value="50" />
 			<Setter Property="FontWeight" Value="Light" />
 

@@ -15,9 +15,11 @@
 
 					<!-- Menu Button-->
 					<c:HamburgerButton Click="mnu_Click" Label="Menu" Symbol="&#xE700;" Content="Main Menu"  ShowImage="Collapsed" ShowSymbol="Visible" />
-					<!-- Start Viewn-->
-					<c:HamburgerButton Click="ham_Click"  Symbol="St"  ShowImage="Collapsed" ShowSymbol="Visible" SymbolFontFamily="Segoe UI" Label="Start" />
-				
+
+					<!-- Browser Lab-->
+					<c:HamburgerButton Click="ham_Click" Symbol="Wb" SymbolFontFamily="Segoe UI Black" Label="Browser Lab" IconSource="ms-appx:///Assets/webicon.png" />
+
+
 					<!-- Map Lab-->
 					<c:HamburgerButton Click="ham_Click" Symbol="Mp" SymbolFontFamily="Segoe UI Black" Label="Map Lab"   IconSource="ms-appx:///Assets/MapIcon.png" />
 					<!-- PDF Lab-->
@@ -26,8 +28,7 @@
 					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk" SymbolFontFamily="Segoe UI Black" Label="Sketch Lab" IconSource="ms-appx:///Assets/sketchicon.png" />
 
 				
-					<!-- WebDev Lab-->
-					<c:HamburgerButton Click="ham_Click" Symbol="Wb" SymbolFontFamily="Segoe UI Black" Label="WebDev Lab" IconSource="ms-appx:///Assets/webicon.png" />
+
 
 				</StackPanel>
 			</SplitView.Pane>

@@ -16,39 +16,39 @@
 		</Grid.RowDefinitions>
 
 		<c:CmdBar x:Name="cmd" >
-			<c:CmdButton Label="Draw" Icon="Edit" />
+			<c:CmdButton Click="cmd_Click" Label="Draw" Icon="Edit" />
 
-			<c:CmdButton Label="Line">
+			<c:CmdButton Click="cmd_Click" Label="Line">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/line.png"/>
 				</c:CmdButton.Icon>
 
 			</c:CmdButton>
 
-			<c:CmdButton Label="Rectangle">
+			<c:CmdButton Click="cmd_Click" Label="Rectangle">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/rectangle.png"/>
 				</c:CmdButton.Icon>
 
 			</c:CmdButton>
 
-			<c:CmdButton Label="Circle">
+			<c:CmdButton Click="cmd_Click" Label="Circle">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/circle.png"/>
 				</c:CmdButton.Icon>
 
 			</c:CmdButton>
 
-			<c:CmdButton Label="Erase">
+			<c:CmdButton Click="cmd_Click" Label="Erase">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/erase.png"/>
 				</c:CmdButton.Icon>
 
 			</c:CmdButton>
 
-	
-			<c:CmdButton Label="Save" Icon="Save" />
-			<c:CmdButton Label="Clear" Icon="Clear" />
+
+			<c:CmdButton Click="cmd_Click" Label="Save" Icon="Save" />
+			<c:CmdButton Click="cmd_Click" Label="Clear" Icon="Clear" />
 					<c:CmdButton Label="Settings">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/settings.png"/>
@@ -74,7 +74,7 @@
 		</c:CmdBar>
 		<Viewbox Stretch="Uniform" x:Name="viewBox" Grid.Row="1">
 			<Grid x:Name="layoutRoot">
-				<c:SketchCanvas x:Name="sketchCanvas" Width="1920" Height="1080" Margin="25" />
+				<c:SketchCanvas x:Name="sketchCanvas" Width="1920" Height="1080" DrawOpacity=".25" DrawThickness="7" Margin="25" />
 			</Grid>
 		</Viewbox>
 

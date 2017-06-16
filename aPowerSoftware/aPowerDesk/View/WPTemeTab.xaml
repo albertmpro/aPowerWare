@@ -1,0 +1,36 @@
+﻿<c:DocumentControl x:Class="aPowerDesk.View.WPTemeTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:aPowerDesk.View"
+			 xmlns:c="clr-namespace:Albert.Power.Win32;assembly=AlbertWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="960">
+    <Grid>
+		<TabControl  x:Name="tab">
+		  <!--Basic Info -->
+		<c:DocumentTabItem Header="Basic Info" IsClosedEnabled="False">
+				<StackPanel>
+					<TextBlock>
+						<Run FontSize="18pt">Basic Info</Run>
+						<LineBreak />
+						<Line X1="0" X2="300" Stroke="White" />
+					</TextBlock>
+					<TextBlock Foreground="White" Text="Name:" />
+					<TextBox HorizontalAlignment="Left" x:Name="txtTheme" Width="200" />
+
+					<TextBlock Foreground="White" Text="Version:" />
+					<TextBox HorizontalAlignment="Left" x:Name="txtVersion" Width="200" />
+
+					<TextBlock Foreground="White" Text="Author:" />
+					<TextBox HorizontalAlignment="Left" x:Name="txtAuther" Width="200" />
+				</StackPanel>
+			</c:DocumentTabItem>
+			
+			
+			
+
+		</TabControl>
+    </Grid>
+</c:DocumentControl>

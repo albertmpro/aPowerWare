@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using Albert.Power.Runtime;
 using static aPowerLab.LabViewModel;
 using static Albert.Power.Runtime.QuickAnimation;
+using static Albert.Power.Runtime.Device10x;
+using Windows.UI;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace aPowerLab.View
@@ -30,9 +32,14 @@ namespace aPowerLab.View
 
 			//ViewModel Stuff 
 			VMSplitView = splitView;
+
+			//Set the style of the Title Bar 
+			Device10x.TitleBarStyle(
+				(Color)App.Current.Resources["AccentColor4"],Colors.White);
+
 			VMFrame = frame;
-			//Go to the StartView
-			VMNavigate(typeof(StartLab));
+			//Go to the WebLab
+			VMNavigate(typeof(WebLab));
 			
 			//Notify Lamba 
 			VMNotify += (s) =>
@@ -51,14 +58,12 @@ namespace aPowerLab.View
 
 			switch(ham.Symbol)
 			{
-				case "St": // Go to the StartLab 
-					VMNavigate(typeof(StartLab));
-					break;
+			
+				
 				case "Mp": // Go to the map lab
 					VMNavigate(typeof(MapLab));
 					break;
 	
-				
 				case "Sk": // Run the SketchLab 
 					VMNavigate(typeof(SketchLab));
 					break;

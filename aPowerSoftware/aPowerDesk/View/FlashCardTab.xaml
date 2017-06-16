@@ -1,0 +1,42 @@
+﻿<c:DocumentControl x:Class="aPowerDesk.View.FlashCardTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:am="clr-namespace:AMWin32"
+			 xmlns:c="clr-namespace:Albert.Power.Win32;assembly=AlbertWPF"
+             xmlns:local="clr-namespace:aPowerDesk.View"
+		
+			
+             mc:Ignorable="d" Foreground="White" 
+             d:DesignHeight="600" d:DesignWidth="960">
+    <Grid>
+		<TabControl >
+			
+			<c:DocumentTabItem Header="Main View">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="auto" />
+						<RowDefinition />
+						<RowDefinition Height="auto" />
+					</Grid.RowDefinitions>
+					<am:FieldPart Header="Front" x:Name="ctnFront" />
+						<am:ContentPart Grid.Row="1" Header="Back" x:Name="ctnBack" />
+
+					<StackPanel Orientation="Horizontal" Grid.Row="2">
+						<c:PushButton x:Name="btnAdd" Content="Add" ToolTip="Add"  />
+						<c:PushButton x:Name="btnClear" Content="Clear" ToolTip="Clear" />
+						
+					</StackPanel>
+					
+				</Grid>
+			
+			</c:DocumentTabItem>
+			<c:DocumentTabItem Header="List">
+				
+			</c:DocumentTabItem>
+			
+
+		</TabControl>
+	</Grid>
+</c:DocumentControl>

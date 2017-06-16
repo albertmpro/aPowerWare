@@ -27,7 +27,7 @@ namespace aPowerLab.View
 		public WebLab()
 		{
 			this.InitializeComponent();
-			VMNotify("You are on hte WebLab.");
+			//VMNotify("You are on hte WebLab.");
 		}
 
 		void txtUrl_KeyUp(object sender, KeyRoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace aPowerLab.View
 
 		void WebNavigate()
 		{
-			if (txtUrl.Text.StartsWith("http://"))
+			if (txtUrl.Text.StartsWith("http://")|| txtUrl.Text.StartsWith("https://"))
 				webView.Navigate(new Uri(txtUrl.Text)); // Navigate the url 
 			else
 			{
@@ -78,7 +78,20 @@ namespace aPowerLab.View
 		{
 			//Notify the Application what is going on 
 			//App.ViewModel.Notify("Loading...");
-			VMNotify("Loading..");
+			if(VMNotify != null)
+				VMNotify("Loading..");
+		}
+
+		private void quickNote_GotFocus(object sender, RoutedEventArgs e)
+		{
+			//Unfocus everything else 
+			txtUrl.Focus(FocusState.Unfocused);
+			webView.Focus(FocusState.Unfocused);
+		}
+
+		private void Flyout_Opened(object sender, object e)
+		{
+			quickNote.Focus(FocusState.Programmatic);
 		}
 	}
 }

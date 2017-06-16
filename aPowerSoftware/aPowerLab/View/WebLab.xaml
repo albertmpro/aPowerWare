@@ -12,6 +12,7 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition />
+			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="80" />
@@ -19,12 +20,30 @@
 			<ColumnDefinition Width="auto" />
 		</Grid.ColumnDefinitions>
 		<!-- Navigatin Bar-->
-		<TextBox Header="Address Box" GotFocus="txtUrl_GotFocus" HeaderTemplate="{StaticResource h4}" Grid.Column="1" x:Name="txtUrl"  KeyUp="txtUrl_KeyUp" InputScope="Url" />
+		<TextBox  Margin="0,0,0,17" Header="Address Box" GotFocus="txtUrl_GotFocus" HeaderTemplate="{StaticResource h4}" Grid.Column="1" x:Name="txtUrl"  KeyUp="txtUrl_KeyUp" InputScope="Url" />
 		<c:PushButton Click="go_Click" Grid.Column="2" Width="65" Content="GO" />
 
-		<WebView Source="http://google.com" NavigationStarting="webView_NavigationStarting" NavigationCompleted="webView_NavigationCompleted" x:Name="webView" Grid.Row="1" Grid.ColumnSpan="3" />
-
-
+		<WebView  Source="http://albertmpro.github.io" NavigationStarting="webView_NavigationStarting" NavigationCompleted="webView_NavigationCompleted" x:Name="webView" Grid.Row="1" Grid.ColumnSpan="3" />
+		<c:CmdBar x:Name="cmdBar"  Grid.Row="2" Grid.ColumnSpan="3">
+			<c:CmdButton GotFocus="quickNote_GotFocus" ToolTipService.ToolTip="Take Notes" Icon="NewFolder" Label="Notes">
+				<c:CmdButton.Flyout>
+					<Flyout Opened="Flyout_Opened" >
+						<Grid >
+							<local:QuickNote x:Name="quickNote" Header="Quick Note:" />
+						</Grid>
+					</Flyout>
+				</c:CmdButton.Flyout>
+			</c:CmdButton>
+			<c:CmdButton  ToolTipService.ToolTip="Quick SKetch" Icon="Edit" Label="Sketch">
+				<c:CmdButton.Flyout>
+					<Flyout Opened="Flyout_Opened" >
+						<Grid >
+							<local:QuickSketch />
+						</Grid>
+					</Flyout>
+				</c:CmdButton.Flyout>
+			</c:CmdButton>
+		</c:CmdBar> 
 
 	</Grid>
 </c:Page10x>

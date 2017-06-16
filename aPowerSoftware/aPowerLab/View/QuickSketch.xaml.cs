@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Albert.Power.Runtime;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,31 +13,24 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Albert.Power.Runtime;
 using static aPowerLab.LabViewModel;
 using static Albert.Power.Runtime.AsyncIO;
 using static Albert.Power.Runtime.Device10x;
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace aPowerLab.View
 {
-	/// <summary>
-	/// An empty page that can be used on its own or navigated to within a Frame.
-	/// </summary>
-	public sealed partial class SketchLab : Page10x
+	public sealed partial class QuickSketch : UserControl
 	{
-
-
-		public SketchLab()
+		public QuickSketch()
 		{
 			this.InitializeComponent();
 		}
-
 		async void cmd_Click(object sender, RoutedEventArgs e)
 		{
 			var cmd = sender as CmdButton;
 
-			switch(cmd.Label)
+			switch (cmd.Label)
 			{
 				case "Draw":
 					//Use the Draw Tool 
@@ -67,10 +61,10 @@ namespace aPowerLab.View
 
 					//Message box Lamba for clearing the sketch 
 					await MsgShow("Clearing", "Do you want to clear this document?", "Clear", "cancel", () =>
-					{
-						//Clear the SketchCanvas 
-						sketchCanvas.Children.Clear();
-					});
+					   {
+						   //Clear the SketchCanvas 
+						   sketchCanvas.Children.Clear();
+					   });
 					break;
 				case "Save":
 					//Export the image 
@@ -80,10 +74,6 @@ namespace aPowerLab.View
 
 					break;
 			}
-
-
 		}
-
-
 	}
 }

@@ -6,22 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:c="using:Albert.Power.Runtime"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Width="450"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="500">
 
     <Grid Background="{StaticResource AccentBrush4}">
 		<Grid.RowDefinitions>
 			<RowDefinition />
 			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
-		<c:TextEdit  x:Name="txt" Header="Quick Note:" Height="350" />
-
-		<StackPanel Orientation="Horizontal" Grid.Row="1">
-		<c:PushButton x:Name="btnSave"  Content="Save"  />
-			<c:PushButton x:Name="btnLoad"  Content="Load"  />
-
-		</StackPanel>
+		<c:TextEdit  x:Name="txt" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"  ToolTipService.ToolTip="Type your note here..."  Header="Notes:" Height="350" />
+		<c:CmdBar  Grid.Row="1" x:Name="cmd">
+			<c:CmdButton Label="Save" ToolTipService.ToolTip="Save Note" Click="save_Click" Icon="Save" />
+			<c:CmdButton Label="Load" ToolTipService.ToolTip="Load a file"  Click="load_Click" Icon="OpenFile" />
+			<c:CmdButton Label="Clear"  ToolTipService.ToolTip="Clear the Note" Click="clear_Click" Icon="Clear" />
+		</c:CmdBar>
 
 
 	</Grid>

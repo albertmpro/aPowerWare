@@ -13,5 +13,8 @@ namespace aPowerDesk
 	/// </summary>
 	public partial class App : Application
 	{
+		public static DeskViewModel ViewModel { get; set; } = (DeskViewModel)App.Current.Resources["viewModel"];
+
+
 	}
 }

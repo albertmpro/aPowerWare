@@ -1,0 +1,40 @@
+﻿<c:ViewShell x:Class="aPowerDesk.View.MainShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:c="clr-namespace:Albert.Power.Win32;assembly=AlbertWPF"
+        xmlns:local="clr-namespace:aPowerDesk.View"
+        mc:Ignorable="d"
+        Title="aPowerDesk" Icon="/Assets/aPowerDesk.png" Height="600" Width="960">
+    <Grid Background="{StaticResource AccentBrush4}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+
+		<!--Menu -->
+		<Menu x:Name="mnu">
+			<MenuItem Header="File">
+				
+			</MenuItem>
+			<MenuItem Header="Edit">
+				
+			</MenuItem>
+			<MenuItem Header="Tools">
+				
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem Header="About" />
+			</MenuItem>
+		</Menu>
+		<!-- Frame -->
+		<Frame Grid.Row="1" NavigationUIVisibility="Hidden" x:Name="frame" />
+		<!--Status Bar-->
+		<StatusBar x:Name="statusBar" Grid.Row="2">
+			<TextBlock FontWeight="Bold" Text="StatusBar: " />
+			<TextBlock x:Name="tbStatus" Foreground="White" />
+		</StatusBar>
+    </Grid>
+</c:ViewShell>

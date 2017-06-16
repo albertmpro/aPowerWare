@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlbertPower", "..\AlbertPower\AlbertPower\AlbertPower.csproj", "{48B7F450-C781-44F7-80EA-473CE4053F54}"
 EndProject
@@ -19,11 +19,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Win32", "Win32", "{D8BFB9CA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aPowerLab", "aPowerLab\aPowerLab.csproj", "{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aPowerDesk", "aPowerDesk\aPowerDesk.csproj", "{D06452F1-E05D-4604-A7A7-539E754F5FE9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AMWin32", "AMWin32\AMWin32.shproj", "{6C63EDD1-2F71-4432-AC08-B53D83376C7A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\AlbertPower\AlbertWeb\AlbertWeb.projitems*{49fa90e9-4765-4b2e-93ec-4390eeef8fae}*SharedItemsImports = 13
+		AMWin32\AMWin32.projitems*{6c63edd1-2f71-4432-ac08-b53d83376c7a}*SharedItemsImports = 13
 		..\AlbertPower\AlbertWeb\AlbertWeb.projitems*{c8b2aa41-69de-4569-80c4-fd3b0f60adce}*SharedItemsImports = 4
 		..\AlbertPower\AlbertWeb\AlbertWeb.projitems*{cfeeeb93-f771-4299-ade7-ee941ee2b5db}*SharedItemsImports = 4
+		..\AlbertPower\AlbertWeb\AlbertWeb.projitems*{d06452f1-e05d-4604-a7a7-539e754f5fe9}*SharedItemsImports = 4
+		AMWin32\AMWin32.projitems*{d06452f1-e05d-4604-a7a7-539e754f5fe9}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +108,8 @@ Global
 		{C8B2AA41-69DE-4569-80C4-FD3B0F60ADCE}.Release|x86.ActiveCfg = Release|Any CPU
 		{C8B2AA41-69DE-4569-80C4-FD3B0F60ADCE}.Release|x86.Build.0 = Release|Any CPU
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|Any CPU.Build.0 = Debug|x86
+		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|ARM.ActiveCfg = Debug|ARM
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|ARM.Build.0 = Debug|ARM
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -122,6 +131,22 @@ Global
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Release|x86.ActiveCfg = Release|x86
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Release|x86.Build.0 = Release|x86
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB}.Release|x86.Deploy.0 = Release|x86
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|x64.Build.0 = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|ARM.Build.0 = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|x64.ActiveCfg = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|x64.Build.0 = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,5 +156,7 @@ Global
 		{112A2A44-4D21-451E-9B3B-994060152F6E} = {D8BFB9CA-44CA-468C-BD1B-9FD823E30E00}
 		{C8B2AA41-69DE-4569-80C4-FD3B0F60ADCE} = {D8BFB9CA-44CA-468C-BD1B-9FD823E30E00}
 		{CFEEEB93-F771-4299-ADE7-EE941EE2B5DB} = {A104016E-E4B9-4451-A04E-EF0FE9406B38}
+		{D06452F1-E05D-4604-A7A7-539E754F5FE9} = {D8BFB9CA-44CA-468C-BD1B-9FD823E30E00}
+		{6C63EDD1-2F71-4432-AC08-B53D83376C7A} = {D8BFB9CA-44CA-468C-BD1B-9FD823E30E00}
 	EndGlobalSection
 EndGlobal
