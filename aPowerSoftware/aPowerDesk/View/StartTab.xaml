@@ -17,7 +17,7 @@
 				<LineBreak />
 				<Hyperlink Click="hyper_Click" Tag="txt">Create a New Text Document</Hyperlink>
 				<LineBreak />
-					<Hyperlink Click="hyper_Click" Tag="flc">Create a New FlashCard Document</Hyperlink>
+					<Hyperlink Click="hyper_Click" Tag="writer">Create a New Writer  Document</Hyperlink>
 				<LineBreak />
 				
 				<Hyperlink Click="hyper_Click" Tag="txt2">Open Text Document</Hyperlink>

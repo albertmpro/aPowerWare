@@ -25,6 +25,8 @@
 
 		<WebView  Source="http://albertmpro.github.io" NavigationStarting="webView_NavigationStarting" NavigationCompleted="webView_NavigationCompleted" x:Name="webView" Grid.Row="1" Grid.ColumnSpan="3" />
 		<c:CmdBar x:Name="cmdBar"  Grid.Row="2" Grid.ColumnSpan="3">
+			<c:CmdButton ToolTipService.ToolTip="Go Back" Click="cmd_Click" Label="Back" Icon="Back" />
+			<c:CmdButton ToolTipService.ToolTip="Go Forward" Click="cmd_Click" Label="Forward" Icon="Forward" />
 			<c:CmdButton GotFocus="quickNote_GotFocus" ToolTipService.ToolTip="Take Notes" Icon="NewFolder" Label="Notes">
 				<c:CmdButton.Flyout>
 					<Flyout Opened="Flyout_Opened" >

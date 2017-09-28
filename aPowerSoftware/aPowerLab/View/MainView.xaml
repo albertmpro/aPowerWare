@@ -22,8 +22,11 @@
 
 					<!-- Map Lab-->
 					<c:HamburgerButton Click="ham_Click" Symbol="Mp" SymbolFontFamily="Segoe UI Black" Label="Map Lab"   IconSource="ms-appx:///Assets/MapIcon.png" />
-					<!-- PDF Lab-->
-			
+
+					<!-- Sketch Lab -->
+					<c:HamburgerButton  Click="ham_Click"  Symbol="Im" SymbolFontFamily="Segoe UI Black" Label="Web Image Lab" IconSource="ms-appx:///Assets/charactericon.png" />
+
+
 					<!-- Sketch Lab -->
 					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk" SymbolFontFamily="Segoe UI Black" Label="Sketch Lab" IconSource="ms-appx:///Assets/sketchicon.png" />
 

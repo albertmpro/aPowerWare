@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using Albert.Power.Runtime;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Albert.Power.Runtime;
-using static aPowerLab.LabViewModel;
 using static Albert.Power.Runtime.AsyncIO;
 using static Albert.Power.Runtime.Device10x;
+using static aPowerLab.LabViewModel;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace aPowerLab.View
@@ -30,6 +18,13 @@ namespace aPowerLab.View
 		public SketchLab()
 		{
 			this.InitializeComponent();
+		}
+
+		void apply_Click(object sender, RoutedEventArgs e)
+		{
+			sketchCanvas.DrawThickness = slideSize.Value;
+			sketchCanvas.DrawOpacity = slideOpacity.Value;
+			sketchCanvas.DrawBrush = new SolidColorBrush(colorPicker.Color);
 		}
 
 		async void cmd_Click(object sender, RoutedEventArgs e)

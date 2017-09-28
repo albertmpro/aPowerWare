@@ -63,9 +63,9 @@
 								<RowDefinition Height="auto"  />
 							</Grid.RowDefinitions>
 							<Slider x:Name="slideSize" Header="Size" />
-							<Slider x:Name="slidrOpacity" Grid.Row="1" Header="Opacity" />
+							<Slider x:Name="slideOpacity" Grid.Row="1" Header="Opacity" />
 							<c:ColorPicker x:Name="colorPicker" Grid.Row="2" />
-							<c:PushButton Grid.Row="3" x:Name="btnChanges" Content="Apply Chnages" />
+							<c:PushButton Grid.Row="3" x:Name="btnChanges" Click="apply_Click" Content="Apply Chnages" />
 						</Grid>
 					</Flyout>
 				</c:CmdButton.Flyout>

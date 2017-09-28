@@ -45,6 +45,25 @@ namespace aPowerLab.View
 			WebNavigate();
 		}
 
+		void cmd_Click(object sender, RoutedEventArgs e)
+		{
+			var cmd = sender as CmdButton;
+
+
+			switch (cmd.Label)
+			{
+				case "Back":
+					webView.GoBack();
+					break;
+				case "Forward":
+					webView.GoForward();
+					break;
+				default:
+
+					break;
+
+			}
+		}
 		void WebNavigate()
 		{
 			if (txtUrl.Text.StartsWith("http://")|| txtUrl.Text.StartsWith("https://"))

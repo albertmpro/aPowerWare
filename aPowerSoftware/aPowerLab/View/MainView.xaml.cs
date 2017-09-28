@@ -70,6 +70,9 @@ namespace aPowerLab.View
 				case "Wb": // Rin the WebLab
 					VMNavigate(typeof(WebLab));
 					break;
+				case "Im":
+					VMNavigate(typeof(WebImgLab));
+					break;
 				default:
 
 					break;

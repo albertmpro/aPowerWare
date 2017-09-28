@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>aPowerConsol.ico</ApplicationIcon>
+    <ApplicationIcon>aPowerWebConsole.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework" />
@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="aPowerConsol.ico" />
     <Content Include="aPowerConsol.png" />
+    <Content Include="aPowerWebConsole.ico" />
+    <Content Include="aPowerWebConsole.png" />
   </ItemGroup>
   <Import Project="..\..\AlbertPower\AlbertWeb\AlbertWeb.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

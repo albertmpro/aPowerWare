@@ -646,6 +646,38 @@ namespace Albert.Power.Runtime
 			}
 		}
 
+		public static async Task OpenPictureAsync(List<Image> images)
+		{
+			//Creae the OpenFile Picker 
+			var picker = new FileOpenPicker();
+			picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+			picker.FileTypeFilter.Add(".png");
+			picker.FileTypeFilter.Add(".jpg");
+			picker.FileTypeFilter.Add(".jpeg");
+			picker.FileTypeFilter.Add(".tiff");
+
+			//Show the Dialog 
+			var file = await picker.PickSingleFileAsync();
+
+			if (file != null)
+			{
+				//Load the Picture 
+				//await LoadImageSourceAsync(_img, file);
+				foreach(var image in images)
+				{
+					//Load all images at once 
+					await LoadImageSourceAsync(image, file);
+				}
+
+
+
+			}
+			else
+			{
+				//Do Nothing for now 
+			}
+		}
+
 		
 
 		/// <param name="_method">The Method that excutes the OpenPicker Logic</param>

@@ -1,0 +1,56 @@
+﻿<c:Page10x
+    x:Class="aPowerLab.View.WebImgLab"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aPowerLab.View"
+	xmlns:c="using:Albert.Power.Runtime"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AccentBrush4}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackPanel HorizontalAlignment="Center">
+			<TextBlock x:Name="tbSize">
+			
+	
+			</TextBlock>
+			<c:PushButton Click="btnLoad_Click" Margin="10" x:Name="btnLoad" Content="Load Image" />
+		</StackPanel>
+		<Pivot x:Name="poivot" Grid.Row="1">
+			<PivotItem Header="Original Image">
+			<ScrollViewer >
+			
+				
+				<Viewbox Stretch="None" >
+					<Grid>
+						<Image x:Name="imgOriginal"  />
+					</Grid>
+				</Viewbox>
+				
+			
+		</ScrollViewer>	
+			</PivotItem>
+			<PivotItem Header="Thumbnails">
+				<ScrollViewer>
+					<StackPanel>
+						<TextBlock x:Name="tb504"  />
+						<Image  x:Name="img504" Width="504" Margin="7" />
+						<TextBlock TextAlignment="Center" x:Name="tb400" />
+						<Image x:Name="img400" Width="400" Margin="7" />
+						<TextBlock TextAlignment="Center" x:Name="tb200"  />
+						<Image x:Name="img200" Width="200" Margin="7" />
+						<TextBlock TextAlignment="Center" x:Name="tb100" Margin="4"  />
+						<Image x:Name="img100" Width="100" Margin="7" />
+					</StackPanel>
+				</ScrollViewer>
+			</PivotItem>
+		</Pivot>
+		
+
+
+	</Grid>
+</c:Page10x>

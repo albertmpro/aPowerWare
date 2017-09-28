@@ -32,5 +32,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)FIeldPart.xaml.cs">
       <DependentUpon>FIeldPart.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Writer.cs" />
   </ItemGroup>
 </Project>

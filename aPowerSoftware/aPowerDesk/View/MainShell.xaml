@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:c="clr-namespace:Albert.Power.Win32;assembly=AlbertWPF"
+		xmlns:l="clr-namespace:aPowerDesk"	 
         xmlns:local="clr-namespace:aPowerDesk.View"
         mc:Ignorable="d"
         Title="aPowerDesk" Icon="/Assets/aPowerDesk.png" Height="600" Width="960">
@@ -17,7 +18,15 @@
 		<!--Menu -->
 		<Menu x:Name="mnu">
 			<MenuItem Header="File">
-				
+				<MenuItem Command="New" />
+				<MenuItem Command="Open" />
+				<MenuItem Command="Save" />
+				<MenuItem Command="c:DesktopCommands.SaveAs" />
+				<Separator />
+			
+				<MenuItem Command="l:DeskViewModel.RunConsole" />
+				<Separator />
+				<MenuItem Command="c:DesktopCommands.Quit" />
 			</MenuItem>
 			<MenuItem Header="Edit">
 				

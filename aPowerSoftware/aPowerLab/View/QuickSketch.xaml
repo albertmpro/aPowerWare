@@ -16,10 +16,10 @@
 			<RowDefinition />
 			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
-		<c:SketchCanvas x:Name="sketchCanvas" DrawBrush="Black" Background="White" DrawThickness="5.5" DrawOpacity=".2" />
+		<c:SketchCanvas x:Name="sketchCanvas" DrawBrush="Black" Background="White" DrawThickness="5.5" DrawOpacity=".32" />
 
 		<c:CmdBar x:Name="cmd" Grid.Row="1" >
-			<c:CmdButton Label="Draw" Icon="Edit" />
+			<c:CmdButton Label="Draw" Click="cmd_Click" Icon="Edit" />
 			<c:CmdButton Click="cmd_Click" Label="Line">
 				<c:CmdButton.Icon>
 					<BitmapIcon UriSource="ms-appx:///Assets/appbar/line.png"/>

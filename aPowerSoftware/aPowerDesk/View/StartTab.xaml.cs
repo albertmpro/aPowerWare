@@ -43,14 +43,21 @@ namespace aPowerDesk.View
 					//Create a new TextEdtor 
 					var txt = new TextTab(VMTab);
 					break;
-				case "flc":
+				case "writer":
 					//Create a new FlashCardDocment 
-					var flashcard = new FlashCardTab(VMTab);
+					var writer = new WebWriter(VMTab);
+					break;
+				case "writer2":
+					Win32IO.OpenDialogTask("Writing File", "All Files(.)|*.*", (o) =>
+					{
+						
+					});		
+						
 					break;
 				case "txt2": //Load File in 
 					Win32IO.OpenDialogTask("Open Text File", "All Files(.)|*.*", (o) =>
 					  {
-						  //Load the fiel 
+						  //Load the
 						  var txt2 = new TextTab(VMTab,o.FileName);
 
 

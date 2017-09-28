@@ -99,6 +99,9 @@
     <Compile Include="View\TextTab.xaml.cs">
       <DependentUpon>TextTab.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WebWriter.xaml.cs">
+      <DependentUpon>WebWriter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WPTemeTab.xaml.cs">
       <DependentUpon>WPTemeTab.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\TextTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WebWriter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
