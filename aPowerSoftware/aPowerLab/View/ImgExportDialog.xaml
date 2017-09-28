@@ -14,5 +14,9 @@
     SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
 
     <Grid>
+		<StackPanel>
+			<RadioButton x:Name="radPng" Content="Export as PNG" />
+			<RadioButton x:Name="radJepg" Content="Export as JPEG" />
+		</StackPanel>
     </Grid>
 </c:MsgDialog>
