@@ -39,6 +39,10 @@ namespace aPowerDesk.View
 
 			switch(hype.Tag)
 			{
+				case "font":
+					//Load Font Explorer 
+					var font = new FontExplore(VMTab);
+					break;
 				case "txt":
 					//Create a new TextEdtor 
 					var txt = new TextTab(VMTab);

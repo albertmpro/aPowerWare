@@ -9,6 +9,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml;
 using Windows.UI;
+using Windows.UI.Xaml.Navigation;
 
 namespace Albert.Power.Runtime
 {
@@ -30,6 +31,9 @@ namespace Albert.Power.Runtime
 				await statusbar.HideAsync(); // Hide the statusbar
 			});
 		}
+
+
+
 
 		/// <summary>
 		/// Set the Orientation with this method  

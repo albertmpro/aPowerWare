@@ -23,6 +23,7 @@ namespace aPowerDesk.View
 
 		//Field's 
 		StartTab startPage;
+		
 		public TabPage()
 		{
 			InitializeComponent();
@@ -32,6 +33,7 @@ namespace aPowerDesk.View
 
 			//Create a StartPage 
 			startPage = new StartTab(VMTab);
+			
 
 
 		}

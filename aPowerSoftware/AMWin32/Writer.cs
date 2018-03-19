@@ -12,7 +12,7 @@ using static System.Windows.MessageBox;
 using static aPowerDesk.DeskViewModel;
 
 namespace AMWin32
-{
+{ 
     public class Writer: TextBox 
     {
 		public Writer()
@@ -55,10 +55,11 @@ namespace AMWin32
 					//Define the Current File 
 					CurrentFile = o.FileName;
 
-
+					//Update your TabItem 
+					TabItem.Header = FileInfo.Name;
 					//Load the File 
 					Text = ReadAllText(CurrentFile);
-
+					
 					//Send message to the Applcatio 
 					VMNotify($"You have opened {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 
@@ -81,7 +82,8 @@ namespace AMWin32
 							CurrentFile = s.FileName;
 							//Write the Text File 
 							WriteAllText(CurrentFile, Text);
-
+							//Update tab 
+							TabItem.Header = FileInfo.Name;
 							//Send message to applicaiton 
 							VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 						});
@@ -89,7 +91,8 @@ namespace AMWin32
 					default:
 						//Write the Text File 
 						WriteAllText(CurrentFile, Text);
-
+						//Update your TabItem 
+						TabItem.Header = FileInfo.Name;
 						//Send message to applicaiton 
 						VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 						break;
@@ -105,8 +108,13 @@ namespace AMWin32
 					FileInfo = new FileInfo(s.FileName);
 					// Define the Current File 
 					CurrentFile = s.FileName;
+
+
 					//Write the Text File 
 					WriteAllText(CurrentFile, Text);
+
+					//Update your TabItem 
+					TabItem.Header = FileInfo.Name;
 
 					//Send message to applicaiton 
 					VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");

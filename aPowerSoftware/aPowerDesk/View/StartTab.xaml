@@ -17,6 +17,8 @@
 				<LineBreak />
 				<Hyperlink Click="hyper_Click" Tag="txt">Create a New Text Document</Hyperlink>
 				<LineBreak />
+				<Hyperlink Click="hyper_Click" Tag="font">Font Explore</Hyperlink>
+				<LineBreak />
 					<Hyperlink Click="hyper_Click" Tag="writer">Create a New Writer  Document</Hyperlink>
 				<LineBreak />
 				

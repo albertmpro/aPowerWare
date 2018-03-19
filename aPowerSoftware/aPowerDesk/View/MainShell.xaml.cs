@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using aPowerWebConsole;
 using Albert.Power.Win32;
+using static Albert.Power.Win32.ViewModel;
 using static aPowerDesk.DeskViewModel;
 using static Albert.Power.Win32.QuickAnimation;
 namespace aPowerDesk.View
@@ -27,6 +29,15 @@ namespace aPowerDesk.View
 		public MainShell()
 		{
 			InitializeComponent();
+
+			void Console_Command(object sender, ExecutedRoutedEventArgs e)
+			{
+				//Run the Console Application 
+				RunExeFile("aPowerWebConsole.exe");
+			}
+
+			//Add the Command Binding to run the Console 
+			CommandBindings.Add(new CommandBinding(DeskViewModel.RunConsole,Console_Command));
 
 			//Create a instansce of the Tab page 
 			tabPage = new TabPage();
@@ -47,6 +58,7 @@ namespace aPowerDesk.View
 					1, .4, TimeSpan.FromSeconds(10));
 					
 			}
+			
 			//VMNotify  Expression 
 			VMNotify = notify;
 

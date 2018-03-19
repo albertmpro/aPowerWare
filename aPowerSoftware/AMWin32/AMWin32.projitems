@@ -23,6 +23,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeEdutor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CodePart.xaml.cs">
       <DependentUpon>CodePart.xaml</DependentUpon>
     </Compile>

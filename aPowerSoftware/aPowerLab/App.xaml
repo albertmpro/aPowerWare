@@ -38,7 +38,7 @@
 			<TextBlock Margin="7,7,0,0" Text="{Binding }" FontSize="24" Foreground="White" />
 		</DataTemplate>
 		<DataTemplate x:Key="h2">
-			<TextBlock Text="{Binding }" FontSize="24" FontWeight="Light" Foreground="White" />
+			<TextBlock FontWeight="Bold" Text="{Binding }" FontSize="24" Foreground="White" />
 		</DataTemplate>
 		<DataTemplate x:Key="h3">
 			<TextBlock Text="{Binding }" FontWeight="Black" FontSize="24" Foreground="White" />

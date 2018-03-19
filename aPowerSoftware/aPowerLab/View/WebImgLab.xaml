@@ -12,6 +12,7 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition />
+			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
 		<StackPanel HorizontalAlignment="Center">
 			<TextBlock x:Name="tbSize">

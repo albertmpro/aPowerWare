@@ -18,6 +18,8 @@ namespace Albert.Power.Runtime
 			//Do Nothing 
 		}
 
+	
+
 		public MsgDialog(string _title, object _content, string _button1)
 		{
 			Title = _title;

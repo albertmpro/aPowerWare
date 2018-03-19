@@ -15,14 +15,14 @@ namespace Albert.Power.Win32
         /// Method allows the ViewModel to run other .exe on the system 
         /// </summary>
         /// <param name="exeFile">File path of the .exe file</param>
-        public void RunExeFile(string exeFile)
+        public static void RunExeFile(string exeFile)
         {
             Process p = new Process();
             p.StartInfo.FileName = exeFile;
             p.Start();
         }
 
-		public static Action<string> VMNotify;
+		//public static Action<string> VMNotify;
 
 		//Interface values 
 

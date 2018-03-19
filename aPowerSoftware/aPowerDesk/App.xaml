@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:aPowerDesk"
 			 xmlns:am="clr-namespace:AMWin32"
 			 xmlns:c="clr-namespace:Albert.Power.Win32;assembly=AlbertWPF"
-			 xmlns:v="clr-namespace:aPowerDesk.View"
+			 xmlns:v="clr-namespace:AMWin32"
              StartupUri="/View/MainShell.xaml">
     <Application.Resources>
 
@@ -25,6 +25,18 @@
 		
 		
 		<!--#region UI -->
+
+		<Style TargetType="ListBox">
+			<Setter Property="Foreground" Value="White" />
+			<Setter Property="Background" Value="BLack" />
+		</Style>
+		
+		<Style TargetType="am:ContentPart">
+			<Setter Property="Background" Value="#333333" />
+
+			<Setter Property="FontSize" Value="24pt" />
+			<Setter Property="Foreground" Value="White" />
+		</Style>
 		<Style TargetType="am:Writer">
 			<Setter Property="Background" Value="#333333" />
 			<Setter Property="TextWrapping" Value="Wrap" />
@@ -100,7 +112,8 @@
 
 
 		<Style TargetType="v:CodeEditor" >
-			<Setter Property="FontSize" Value="16pt" />
+			<Setter Property="FontSize" Value="20pt" />
+			<Setter Property="WordWrap" Value="True" />
 			<Setter Property="FontFamily" Value="Courier New" />
 			<Setter Property="ShowLineNumbers" Value="True" />
 			<Setter Property="Background" Value="{StaticResource AccentBrush4}" />

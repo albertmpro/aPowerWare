@@ -338,6 +338,7 @@ namespace Albert.Power.Runtime
 		/// <returns></returns>
 		public static async Task ExportJpegAsync(StorageFile _file, UIElement _content, double _dpi)
 		{
+			//Create Bitmap
 			var bmp = new RenderTargetBitmap();
 			//render the control to a bitmap 
 			await bmp.RenderAsync(_content);
@@ -535,6 +536,54 @@ namespace Albert.Power.Runtime
 				}
 			}
 		}
+
+		public static async Task ExportJpegAsync(string _suggestedName, UIElement _content, double _dpi)
+		{
+			
+				var bmp = new RenderTargetBitmap();
+				//render the control to a bitmap 
+				await bmp.RenderAsync(_content);
+				var pixelBuffer = await bmp.GetPixelsAsync();
+				//Create a new file picker 
+				var savePicker = new FileSavePicker();
+				//Create a name 
+				
+				savePicker.SuggestedFileName = _suggestedName;
+				//Set location to Pictures 
+				savePicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+				//Setup that default extenstion 
+				savePicker.DefaultFileExtension = ".jpg";
+				savePicker.FileTypeChoices.Add("jpg", new string[] { ".jpg", ".jpeg" });
+				StorageFile fileSave = await savePicker.PickSaveFileAsync();
+				if (fileSave != null)
+				{
+					using (var stream = await fileSave.OpenAsync(FileAccessMode.ReadWrite))
+					{
+
+						var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, stream);
+						//encode the bitmap
+						Stream pixelStream = pixelBuffer.AsStream();
+						byte[] pixels = new byte[pixelStream.Length];
+						await pixelStream.ReadAsync(pixels, 0, pixels.Length);
+						encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Straight, (uint)bmp.PixelWidth, (uint)bmp.PixelHeight, _dpi, _dpi, pixels);
+
+
+						//Set the file name 
+
+						//Clean up the mess
+						await encoder.FlushAsync();
+					}
+
+
+
+
+
+
+
+				}
+			
+		}
+
 		/// <summary>
 		/// Export Tiff Image with SavePicker 
 		/// </summary>

@@ -6,12 +6,9 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:c="using:Albert.Power.Runtime"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="Export Web Images-"
-    PrimaryButtonText="Exoort"
-    SecondaryButtonText="Cancel"
-    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
-    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    mc:Ignorable="d">
+ 
+    
 
     <Grid>
 		<StackPanel>

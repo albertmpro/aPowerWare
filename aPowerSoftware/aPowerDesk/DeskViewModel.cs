@@ -13,7 +13,7 @@ namespace aPowerDesk
 
 	public class DeskViewModel: ViewModel
 	{
-		//Field's 
+	
 
 		//Repsents the command to run the Consle Application 
 		static RoutedUICommand runConsole = new RoutedUICommand("RunConsole", "RunConsole", typeof(DeskViewModel));

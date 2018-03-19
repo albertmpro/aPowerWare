@@ -12,18 +12,14 @@ using Albert.Power.Win32;
 using static Albert.Power.Win32.Win32IO;
 using static System.Windows.MessageBox;
 using static aPowerDesk.DeskViewModel;
-namespace aPowerDesk.View
+
+namespace AMWin32
 {
-	/// <summary>
-	/// CodeEditor TextBox 
-	/// </summary>
-	public class CodeEditor: TextEditor
+	public class CodeEditor : TextEditor
 	{
 
 		public CodeEditor()
 		{
-
-
 			#region Commands 
 
 			// New Command 
@@ -32,7 +28,7 @@ namespace aPowerDesk.View
 				// Create and show the Message Box 
 				var msg = Show("Do you want to create a new document?", "New Document", MessageBoxButton.YesNo);
 
-				switch(msg)
+				switch (msg)
 				{
 					case MessageBoxResult.Yes:
 
@@ -54,29 +50,30 @@ namespace aPowerDesk.View
 			{
 				//OpenDialog Lamba  
 				OpenDialogTask("Open Text FIle", Filter, (o) =>
-				  {
+				{
 
-					  //Define the FIle Info 
-					  FileInfo = new FileInfo(o.FileName);
+					//Define the FIle Info 
+					FileInfo = new FileInfo(o.FileName);
 
-					  //Define the Current File 
-					  CurrentFile = o.FileName;
+					//Define the Current File 
+					CurrentFile = o.FileName;
 
 
-					  //Load the File 
-					  Text = ReadAllText(CurrentFile);
+					//Load the File 
+					Text = ReadAllText(CurrentFile);
+					//Update your TabItem 
+					TabItem.Header = FileInfo.Name;
+					//Send message to the Applcatio 
+					VMNotify($"You have opened {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 
-					  //Send message to the Applcatio 
-					  VMNotify($"You have opened {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
-
-				  });
+				});
 
 			}
 
 			// Save Command 
 			void Save_Command(object sender, ExecutedRoutedEventArgs e)
 			{
-				switch(CurrentFile)
+				switch (CurrentFile)
 				{
 					case null:
 						//SaveDialog Lamba Task 
@@ -88,15 +85,17 @@ namespace aPowerDesk.View
 							CurrentFile = s.FileName;
 							//Write the Text File 
 							WriteAllText(CurrentFile, Text);
-
+							//Update your TabItem 
+							TabItem.Header = FileInfo.Name;
 							//Send message to applicaiton 
 							VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 						});
 						break;
-					 default:
+					default:
 						//Write the Text File 
 						WriteAllText(CurrentFile, Text);
-
+						//Update your TabItem 
+						TabItem.Header = FileInfo.Name;
 						//Send message to applicaiton 
 						VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
 						break;
@@ -107,17 +106,18 @@ namespace aPowerDesk.View
 			void SaveAs_Command(object sender, ExecutedRoutedEventArgs e)
 			{
 				SaveDialogTask("Save your TextFile", Filter, (s) =>
-				  {
-					  // Define the File Info
-					  FileInfo = new FileInfo(s.FileName);
-					  // Define the Current File 
-					  CurrentFile = s.FileName;
-					  //Write the Text File 
-					  WriteAllText(CurrentFile, Text);
-
-					  //Send message to applicaiton 
-					  VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
-				  });
+				{
+					// Define the File Info
+					FileInfo = new FileInfo(s.FileName);
+					// Define the Current File 
+					CurrentFile = s.FileName;
+					//Write the Text File 
+					WriteAllText(CurrentFile, Text);
+					//Update your TabItem 
+					TabItem.Header = FileInfo.Name;
+					//Send message to applicaiton 
+					VMNotify($"You have saved {FileInfo.Name} in the {FileInfo.DirectoryName} directory.");
+				});
 			}
 
 
@@ -138,7 +138,7 @@ namespace aPowerDesk.View
 			#endregion
 
 		}
-		
+
 		/// <summary>
 		/// Gets or Set the TabItem used
 		/// </summary>

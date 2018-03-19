@@ -32,9 +32,9 @@ namespace aPowerDesk.View
 		{
 			InitializeComponent();
 			
-			TabItem = new DocumentTabItem($"Document{Count++}", true, this, _tab);
+			txt.TabItem = new DocumentTabItem($"Document{Count++}", true, this, _tab);
 			//Focus 
-			TabItem.Focus();
+			txt.TabItem.Focus();
 			Focus();
 			txt.Focus();
 			//Notify the Application 

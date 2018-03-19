@@ -82,10 +82,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DeskViewModel.cs" />
-    <Compile Include="View\CodeEditor.cs" />
     <Compile Include="FlashCard.cs" />
+    <Compile Include="FontStyle.cs" />
     <Compile Include="View\FlashCardTab.xaml.cs">
       <DependentUpon>FlashCardTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FontExplore.xaml.cs">
+      <DependentUpon>FontExplore.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainShell.xaml.cs">
       <DependentUpon>MainShell.xaml</DependentUpon>
@@ -118,6 +121,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\FlashCardTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FontExplore.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
