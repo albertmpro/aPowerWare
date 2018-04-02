@@ -20,9 +20,10 @@ using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage.Pickers;
 using Windows.Graphics.Display;
+using static aPowerIdea.IdeaViewModel;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace aPowerIdea.VIew
+namespace aPowerIdea.View
 {
 	/// <summary>
 	/// An empty page that can be used on its own or navigated to within a Frame.
@@ -32,7 +33,24 @@ namespace aPowerIdea.VIew
 		public MainView()
 		{
 			this.InitializeComponent();
+			//Setup the ViewModel
+			//Default Frame
+			VMFrame = frame;
+			//Default Menu
+			VMMenu = hamMenu;
+			//Default StatusBar 
+			VMStatusBar = stackStatus;
+			//Defult SplitView 
+			VMSplitView = splitView; 
+
+			//Set Defult mode 
+			VMMode = IdeaMode.None;
+		
+
+			//Set the Frame 
+			VMFrame.Navigate(typeof(SketchView));
 			
+
 		}
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -45,7 +63,24 @@ namespace aPowerIdea.VIew
 		}
 		void ham_Click(object sender, RoutedEventArgs e)
 		{
+			var ham = sender as HamburgerButton;
 
+			switch(ham.Symbol)
+			{
+				case "Sk":
+					//Navigate to the Sketchview
+					VMFrame.Navigate(typeof(SketchView));
+					VMMode = IdeaMode.None;
+					VMSplitView.IsPaneOpen = false;
+					break;
+				case "Ab":
+					//Navigate to the about page
+					VMFrame.Navigate(typeof(AboutView));
+					VMMode = IdeaMode.Menu;
+					VMSplitView.IsPaneOpen = false;n
+					break;
+
+			}
 		}
 		void mnu_Click(object sender, RoutedEventArgs e)
 		{

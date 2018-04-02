@@ -1,5 +1,5 @@
 ﻿<c:Page10x
-    x:Class="aPowerIdea.VIew.SketchView"
+    x:Class="aPowerIdea.View.SketchView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:aPowerIdea.VIew"
@@ -39,6 +39,8 @@
 
 				<c:CmdButton Click="cmd_Click"  Label="Clear" />
 				<c:CmdButton Click="cmd_Click"  Label="Save" />
+				<c:CmdButton Click="cmd_Click"  Label="Menu" />
+
 			</c:CmdBar.SecondaryCommands>
 		</c:CmdBar>
 
