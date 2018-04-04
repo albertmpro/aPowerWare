@@ -21,6 +21,7 @@
 
 					<!-- Sketch Lab -->
 					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk"  ShowImage="Collapsed" SymbolFontFamily="Segoe UI Black" Label="Sketch Lab"  />
+					<c:HamburgerButton Click="ham_Click" Symbol="In" ShowImage="Collapsed" Label="InstaMesage" />
 					<c:HamburgerButton Click="ham_Click" Symbol="Ab" ShowImage="Collapsed" Label="About" />
 
 

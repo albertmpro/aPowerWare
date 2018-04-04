@@ -73,11 +73,17 @@ namespace aPowerIdea.View
 					VMMode = IdeaMode.None;
 					VMSplitView.IsPaneOpen = false;
 					break;
+				case "In":
+					//Navigate to the about page
+					VMFrame.Navigate(typeof(InstaMsgView));
+					VMMode = IdeaMode.None;
+					VMSplitView.IsPaneOpen = false;
+					break;
 				case "Ab":
 					//Navigate to the about page
 					VMFrame.Navigate(typeof(AboutView));
 					VMMode = IdeaMode.Menu;
-					VMSplitView.IsPaneOpen = false;n
+					VMSplitView.IsPaneOpen = false;
 					break;
 
 			}
