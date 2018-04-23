@@ -25,6 +25,38 @@
 
 		<!--#region Data Templates-->
 
+		<Style TargetType="TextBlock" x:Key="tbBlack" >
+			<Setter Property="FontWeight" Value="Black" />
+		</Style>
+
+		<Style TargetType="TextBlock" x:Key="tbBold" >
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+
+		<Style TargetType="TextBlock" x:Key="tbLight" >
+			<Setter Property="FontWeight" Value="Light" />
+		</Style>
+
+		<DataTemplate x:Key="InstaItem">
+			<Grid Width="250" Height="70" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="80" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+
+				<Border Margin="7" BorderThickness="2.3" BorderBrush="{Binding Border}" Background="{Binding PaperBrush}"  Grid.Column="0">
+					
+						<TextBlock Margin="4" TextAlignment="Center" Text="T" FontSize="34" Foreground="{Binding TextBrush}" />
+					
+					
+				</Border>
+
+				<TextBlock FontSize="26" VerticalAlignment="Center" Grid.Column="1"  Text="{Binding Name}" />
+
+			</Grid>
+			
+		</DataTemplate>
+
 		<DataTemplate x:Key="h1">
 			<TextBlock Margin="7,7,0,0" Text="{Binding }" FontSize="24" Foreground="White" />
 		</DataTemplate>
@@ -39,6 +71,9 @@
 			<TextBlock Text="{Binding }" FontSize="18" Foreground="White" />
 		</DataTemplate>
 
+		<ItemsPanelTemplate x:Key="Wrap">
+			<c:WrapPanel />
+		</ItemsPanelTemplate>
 
 
 		<!--#endregion-->
@@ -63,9 +98,11 @@
 		<Style TargetType="c:PushButton">
 			<Setter Property="Background" Value="{StaticResource AccentChrome}" />
 			<Setter Property="BackgroundPointerOver" Value="{StaticResource AccentBrush2}" />
+			<Setter Property="Margin" Value="7" />
 			<Setter Property="ForegroundPointerOver" Value="White" />
 			<Setter Property="BackgroundPressed" Value="{StaticResource AccentBrush3}" />
-			<Setter Property="Width" Value="125" />
+			<Setter Property="Width" Value="180" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
 			<Setter Property="FontSize" Value="22" />
 			<Setter Property="CornerRadius" Value="4" />
 			<Setter Property="Height" Value="50" />

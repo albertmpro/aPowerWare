@@ -26,11 +26,14 @@ namespace aPowerIdea.View
     /// </summary>
     public sealed partial class InstaMsgView : Page10x
     {
+		InstaMsgDialog msg;
+
         public InstaMsgView()
         {
             this.InitializeComponent();
 			//Set Default Orentation's 
 			Orientation(DisplayOrientations.Portrait);
+			msg = new InstaMsgDialog();
 		}
 
 
@@ -38,11 +41,18 @@ namespace aPowerIdea.View
 		{
 			var cmd = sender as CmdButton;
 
+			void edit()
+			{
+
+			}
+			//Link to the insta Edit Dialog 
+			msg.OnFirstButton += edit;
+
 			async void save()
 			{
 				//Create a random number
 				var random = new Random();
-				//Cfreate a Name 
+				//Create a Name 
 				var name = $"image{random.Next(1, 1000)}";
 				//Write the Image File
 				await ExportJpegAsync(name, txtMsg, 72);
@@ -55,19 +65,22 @@ namespace aPowerIdea.View
 
 			switch (cmd.Label)
 			{
-	
+
 				case "Edit":
+					
+					await msg.ShowAsync();
 
 					break;
 				case "Save":
-
+					await MsgShow("Save Image", "Do you want to save this text?", "Save", "Cancel", save);
 					break;
 				case "Clear":
 
-					await MsgShow("Clear", "Do you want to clear this text", "Clear", "Cancel", clear);
+					await MsgShow("Clear", "Do you want to clear this text?", "Clear", "Cancel", clear);
 
 					break;
 			}
+		}
 
     }
 }

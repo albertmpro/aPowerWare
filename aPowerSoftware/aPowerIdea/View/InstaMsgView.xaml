@@ -21,9 +21,9 @@
 			</Grid>
 		</Viewbox>
 		<c:CmdBar x:Name="cmd" Grid.Row="1" >
-			<c:CmdButton Label="Edit" Icon="Edit" />
-			<c:CmdButton Icon="Save" Label="Save" />
-			<c:CmdButton Label="Clear" Icon="Clear" />
+			<c:CmdButton Label="Edit" Click="cmd_Click"  Icon="Edit" />
+			<c:CmdButton Click="cmd_Click" Icon="Save" Label="Save" />
+			<c:CmdButton Click="cmd_Click" Label="Clear" Icon="Clear" />
 		</c:CmdBar>
 
 

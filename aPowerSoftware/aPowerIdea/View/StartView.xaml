@@ -1,0 +1,27 @@
+﻿<c:Page10x
+    x:Class="aPowerIdea.View.StartView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:c="using:Albert.Power.Runtime"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:aPowerIdea.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource AccentBrush4}">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<TextBlock Text="aPowerIdea" FontWeight="Black" />
+		<StackPanel Grid.Row="1"  VerticalAlignment="Center" Margin="5">
+			
+			<c:PushButton FontWeight="Black" FontSize="25" Height="90" Content="Sketch" Tag="sk" Click="btn_Click" />
+			<c:PushButton FontWeight="Black" FontSize="25" Height="90"  Content="Power Msg" Tag="pr" Click="btn_Click" />
+			<c:PushButton FontWeight="Black" FontSize="25" Height="90"  Content="About" Tag="ab" Click="btn_Click" />
+
+		</StackPanel>
+
+    </Grid>
+</c:Page10x>

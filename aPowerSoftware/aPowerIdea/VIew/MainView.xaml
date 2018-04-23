@@ -16,12 +16,12 @@
 					<!-- Menu Button-->
 					<c:HamburgerButton Click="mnu_Click" Label="Menu" Symbol="&#xE700;" Content="Main Menu"  ShowImage="Collapsed" ShowSymbol="Visible" />
 
-		
 
+					<c:HamburgerButton  Click="ham_Click"  Symbol="St"  ShowImage="Collapsed" SymbolFontFamily="Segoe UI Black" Label="Start"  />
 
 					<!-- Sketch Lab -->
-					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk"  ShowImage="Collapsed" SymbolFontFamily="Segoe UI Black" Label="Sketch Lab"  />
-					<c:HamburgerButton Click="ham_Click" Symbol="In" ShowImage="Collapsed" Label="InstaMesage" />
+					<c:HamburgerButton  Click="ham_Click"  Symbol="Sk"  ShowImage="Collapsed" SymbolFontFamily="Segoe UI Black" Label="Sketch"  />
+					<c:HamburgerButton Click="ham_Click" Symbol="In" ShowImage="Collapsed" Label="Power Msg" />
 					<c:HamburgerButton Click="ham_Click" Symbol="Ab" ShowImage="Collapsed" Label="About" />
 
 

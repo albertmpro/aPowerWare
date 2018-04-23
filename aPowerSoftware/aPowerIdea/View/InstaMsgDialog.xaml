@@ -1,0 +1,64 @@
+﻿<c:SettingsDialog
+    x:Class="aPowerIdea.View.InstaMsgDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:c="using:Albert.Power.Runtime"
+	xmlns:p="using:aPowerIdea"
+    xmlns:local="using:aPowerIdea.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  
+    Title="Power Msg Edit"
+    PrimaryButtonText="Ok"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+	<Pivot>
+		<PivotItem Header="Preview">
+			<Grid>
+				<Viewbox>
+					<Grid BorderBrush="White" BorderThickness="1.4" Width="504" Height="504">
+						<TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="36" Text="Preview Text" FontWeight="Black"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+					</Grid>
+				</Viewbox>
+			</Grid>
+			
+		</PivotItem>
+		<PivotItem Header="Templates">
+			<Grid>
+				<ListBox x:Name="lstTemplates" ItemTemplate="{StaticResource InstaItem}"  ItemsPanel="{StaticResource Wrap}" >
+
+					<p:InstaBrushes Name="Blackboard" Border="White" TextBrush="White" PaperBrush="Black" />
+					<p:InstaBrushes Name="Blue Print" Border="White" TextBrush="White" PaperBrush="#FF00094A" />
+
+					<p:InstaBrushes Name="Chalkboard" Border="White" TextBrush="White" PaperBrush="#FF00950C" />
+					<p:InstaBrushes Name="Pacers" Border="#FFFFC69C" PaperBrush="#FF111191" TextBrush="#FFFFC69C" />
+					<p:InstaBrushes Name="Orange Clown" Border="White" PaperBrush="#FF080402" TextBrush="#FFE57B2C" />
+
+
+
+				</ListBox>
+
+			</Grid>
+
+		</PivotItem>
+
+		<PivotItem Header="Text Properties">
+			<Grid>
+				<StackPanel>
+					<TextBlock Text="Alignment">
+					</TextBlock>
+					<StackPanel Orientation="Horizontal">
+						<c:OptionButton Content="L" />
+						<c:OptionButton Content="C" />
+						<c:OptionButton Content="R" />
+					</StackPanel>
+
+				</StackPanel>
+			</Grid>
+
+		</PivotItem>
+
+	</Pivot>
+
+</c:SettingsDialog>

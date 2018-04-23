@@ -43,13 +43,14 @@ namespace aPowerIdea.View
 			//Defult SplitView 
 			VMSplitView = splitView; 
 
-			//Set Defult mode 
-			VMMode = IdeaMode.None;
+			
 		
 
-			//Set the Frame 
-			VMFrame.Navigate(typeof(SketchView));
-			
+			//Set the Start Frame 
+			VMFrame.Navigate(typeof(StartView));
+			//Set Default mode 
+			VMMode = IdeaMode.Menu;
+
 
 		}
 
@@ -67,6 +68,11 @@ namespace aPowerIdea.View
 
 			switch(ham.Symbol)
 			{
+				case "St":
+					VMFrame.Navigate(typeof(StartView));
+					VMMode = IdeaMode.None;
+					VMSplitView.IsPaneOpen = false;
+					break;
 				case "Sk":
 					//Navigate to the Sketchview
 					VMFrame.Navigate(typeof(SketchView));
@@ -76,7 +82,7 @@ namespace aPowerIdea.View
 				case "In":
 					//Navigate to the about page
 					VMFrame.Navigate(typeof(InstaMsgView));
-					VMMode = IdeaMode.None;
+					VMMode = IdeaMode.Menu;
 					VMSplitView.IsPaneOpen = false;
 					break;
 				case "Ab":

@@ -96,12 +96,16 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="IdeaViewModel.cs" />
+    <Compile Include="InstaColor.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstaMsgDialog.xaml.cs">
+      <DependentUpon>InstaMsgDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\InstaMsgView.xaml.cs">
       <DependentUpon>InstaMsgView.xaml</DependentUpon>
@@ -114,6 +118,12 @@
     </Compile>
     <Compile Include="View\SketchView.xaml.cs">
       <DependentUpon>SketchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Storyboard.xaml.cs">
+      <DependentUpon>Storyboard.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +225,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\InstaMsgDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\InstaMsgView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -228,6 +242,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SketchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Storyboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
