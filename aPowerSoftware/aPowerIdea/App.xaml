@@ -6,6 +6,8 @@
     xmlns:local="using:aPowerIdea"
     RequestedTheme="Dark">
 	<Application.Resources>
+		
+		
 		<!--#region Main Colors and Brushes  -->
 		<Color x:Key="AccentColor">#FF1339B9</Color>
 		<Color x:Key="AccentColor2">#FF5979E6</Color>
@@ -23,6 +25,8 @@
 
 		<!--#endregion-->
 
+		
+		
 		<!--#region Data Templates-->
 
 		<Style TargetType="TextBlock" x:Key="tbBlack" >
@@ -41,7 +45,7 @@
 			<Grid Width="250" Height="70" >
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="80" />
-					<ColumnDefinition />
+				
 				</Grid.ColumnDefinitions>
 
 				<Border Margin="7" BorderThickness="2.3" BorderBrush="{Binding Border}" Background="{Binding PaperBrush}"  Grid.Column="0">
@@ -51,7 +55,7 @@
 					
 				</Border>
 
-				<TextBlock FontSize="26" VerticalAlignment="Center" Grid.Column="1"  Text="{Binding Name}" />
+				
 
 			</Grid>
 			
@@ -78,6 +82,9 @@
 
 		<!--#endregion-->
 
+		
+		
+		
 		<!--#region UI-->
 
 		<Style TargetType="Pivot">
@@ -173,6 +180,9 @@
 		</Style>
 
 		<!--#endregion-->
+		
+		
+		
 	</Application.Resources>
 	
 	

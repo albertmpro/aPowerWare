@@ -14,7 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Albert.Power.Runtime;
 using Windows.Graphics.Display;
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
+
 
 namespace aPowerIdea.View
 {
@@ -27,6 +27,9 @@ namespace aPowerIdea.View
         public Storyboard()
         {
             this.InitializeComponent();
+			
+
+			
 			
 
 		}

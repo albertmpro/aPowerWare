@@ -14,7 +14,7 @@
 			<RowDefinition Height="auto" />
 		</Grid.RowDefinitions>
 		<!-- Sketch Canavs -->
-		<c:SketchCanvas DrawOpacity=".25" DrawThickness="7.4" x:Name="sketchCanvas" />
+		<c:SketchCanvas DrawOpacity=".35" DrawThickness="7.4" x:Name="sketchCanvas" />
 		<c:CmdBar Grid.Row="1" x:Name="cmd">
 			<c:CmdButton Click="cmd_Click" Label="Draw" Icon="Edit" />
 			<c:CmdButton Click="cmd_Click"  Label="Line">
